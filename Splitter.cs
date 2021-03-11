@@ -39,7 +39,7 @@ namespace PDFSplitter
         }
 
         /// <summary>
-        /// Pefrom the split operation. Takes the first page of the document and copties to the end, then apply the a rotation transform to the 
+        /// Perform the split operation. Takes the first page of the document and copties to the end, then apply the a rotation transform to the 
         /// first and last pages if required before finally setting the crop box to hide the section we are not interested in
         /// </summary>
         /// <param name="inputFilePath">The path to the source PDF</param>
@@ -65,7 +65,7 @@ namespace PDFSplitter
 
             Console.Out.Write("Applying crop box adjustments... ");
 
-            //Get crop box of page one. The left half is the back page, the right half the first for a rotated page scane
+            //Get crop box of page one. The left half is the back page, the right half the first for a rotated page
             var cropBox = firstPage.GetCropBox();
 
             if (firstPage.GetRotation() == 0 || firstPage.GetRotation() == 180)
